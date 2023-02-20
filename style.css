@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+body{
+    margin: 0; 
+    padding: 0;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+}
+header{  
+    width: 100%; 
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+/* Header img is not used as background  */
+/* bcoz we cannot shift background img to certain pos */
+/* but by using img we can do it */
+/* and to use it as background we z index */
+.header-img{
+    width: 100%;
+    position: absolute;
+    top: -20vh;
+    z-index: -1; 
+}
+@media only screen and (min-width:1200px){
+    .header-img img{
+        width: 100%;
+    }
+}
+/* Add media query here for width less than 
+60% for img as image is getting shrinked 
+if window size is less*/
+
+.nav{
+    display: flex;
+    margin: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+.nav-bar{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+}
+
+/* title & logo */
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7vh;
+}
+.logo{
+    width: 20vw;
+}
+.head h3{
+    font-size: 2.1rem;
+    color: whitesmoke;
+    font-weight: 400;
+}
+
+/*  Search bar */
+.search-bar{
+    display: flex;
+    width: 55vw;
+    align-items: center;
+    border-radius: 10px;
+    background: white;
+    padding: 5px 10px;
+    overflow: hidden;
+}
+
+.search-bar .search-item{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.search-bar .search-item p{
+    color: gray;
+    border-right: 1px solid gray;
+    font-size: 15px;
+    margin-right:10px;
+    padding: 0 10px;
+}
+.search-bar .search-item input{
+    border: 0;
+    outline: 0;
+    width: 400px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.search-bar .search-item:first-child{
+     width: 30%;
+     color: rgb(255, 126, 139);
+}
+.search-bar .search-item:last-child{
+    width: 70%;
+    color: gray;
+}
